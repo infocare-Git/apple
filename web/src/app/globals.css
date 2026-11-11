@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Design tokens from the brief. Screens use these names only. */
+@theme {
+  --color-apple: #a51f1f; /* text-safe apple red: 7.5:1 with white. Brand #c62828 is 5.6:1, so it is used for the logo and theme colour only */
+  --color-apple-dark: #8b1a1a;
+  --color-leaf: #2e7d32;
+  --color-leafdeep: #1b5e20;
+  --color-cream: #fff8f0;
+  --color-soil: #4e342e;
+  --color-amber: #ffe082;
+  --color-line: #e8dccf;
+  --color-redtint: #fdecea;
+  --color-greentint: #eef6ee;
+  --color-card: #ffffff;
+  --radius-card: 16px;
+  --font-sans: var(--font-noto), "Noto Sans Devanagari", system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  --tabs-h: 76px;
+  --action-h: 0px;
+}
+
+html {
+  font-size: 18px; /* body text minimum 18sp */
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-soil);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+}
+
+/* Visible focus for keyboard and switch users. */
+:focus-visible {
+  outline: 3px solid var(--color-apple);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgb(165 31 31 / 0.45); }
+  100% { box-shadow: 0 0 0 22px rgb(165 31 31 / 0); }
+}
+.listening { animation: pulse-ring 1.2s ease-out infinite; }

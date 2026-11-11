@@ -1,0 +1,10 @@
+{
+  "name": "स्याउ साथी · Syau Sathi",
+  "short_name": "स्याउ साथी",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8F0",
+  "theme_color": "#C62828",
+  "lang": "ne",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
